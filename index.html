@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="./dist/css/styles.min.css">
+
+    <title>Frontend Mentor | Todo app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body id="body">
+    <header class="header">
+      <nav class="header_nav">
+        <div class="header_nav-title">Todo</div>
+        <img src='./images/icon-moon.svg' class="header_nav-theme" />
+      </nav>
+    </header>
+
+    <div class="container">
+      <form class="add-todo">
+        <button id="add-todo-btn"></button>
+        <input type="text" placeholder="Create a new todo..." id='todo-input'/>
+
+    </form>
+
+      <div class="todos"  ondragover='allowDrop(event)'>
+        
+
+        <div class="todos-info">
+          <p class="todos-info-remaining"> 1 item left</p>
+          <button class="todos-info-clear">Clear Completed</button>
+        </div>
+      </div>
+
+      <div class="filter">
+        <button class="filter-all selected filter-btn">All</button
+        ><button class="filter-active filter-btn">Active</button
+        ><button class="filter-completed filter-btn">Completed</button>
+      </div>
+    </div>
+
+    <p class="drag">
+      Drag and drop to reorder list
+    </p>
+
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
