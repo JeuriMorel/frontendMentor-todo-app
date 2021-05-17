@@ -62,7 +62,9 @@ const createTodo = (todo) => {
   newTodo.className = "todo";
   newTodo.draggable = "true";
   newTodo.ondragstart = dragItem;
+  newTodo.ontouchstart = dragItem;
   newTodo.ondragend = dragEnd;
+  newTodo.ontouchend = dragEnd;
   newTodo.innerHTML = `
           <button class="todo-check">
             <img src="./images/icon-check.svg" alt="check">
