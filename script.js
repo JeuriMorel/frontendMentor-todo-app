@@ -18,11 +18,20 @@ const dragEnd = (e) => {
   e.target.classList.remove('dragging')
 };
 
+const onMove = (e) => {
+  e.preventDefault();
+  const afterElement = getDragAfterElement(e.touches[0].clientY);
+  const draggable = document.querySelector(".dragging");
+  if (afterElement == null) {
+    todosDiv.insertBefore(draggable, todosDiv.lastChild.previousSibling);
+  } else {
+    todosDiv.insertBefore(draggable, afterElement);
+  }
+}
+
 const allowDrop = (e) => {
   e.preventDefault();
   const afterElement = getDragAfterElement(e.clientY);
-  console.log(afterElement)
-  console.log(afterElement)
   const draggable = document.querySelector('.dragging')
   if (afterElement == null) {
     todosDiv.insertBefore(draggable, todosDiv.lastChild.previousSibling);
