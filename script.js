@@ -12,6 +12,10 @@ toggleBtn.onclick = () => {
 };
 
 const dragItem = (e) => {
+  if (!e.target.draggable) {
+    return
+  }
+  e.stopPropagation();
   e.target.classList.add('dragging')
 };
 const dragEnd = (e) => {
