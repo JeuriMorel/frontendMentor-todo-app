@@ -18,6 +18,7 @@ const dragItem = (e) => {
   e.stopPropagation();
   e.target.classList.add('dragging')
 };
+
 const dragEnd = (e) => {
   e.target.classList.remove('dragging')
 };
@@ -74,7 +75,7 @@ const createTodo = (todo) => {
             <img src="./images/icon-check.svg" alt="check">
           </button>
           <p class="todo-todo">${todo}</p>
-          <img src="./images/icon-cross.svg" alt="cross-out" class="todo-cross">`;
+          <img src="./images/icon-cross.svg" alt="cross-out" class="todo-cross" draggable='false'>`;
   todosDiv.insertBefore(newTodo, todosDiv.lastChild.previousSibling);
 };
 
